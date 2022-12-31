@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+*{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+@mixin make_center(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+$back_color: #007bff;
+body{
+    margin: 0;
+    min-height: 100vh;
+    div.sayt_top {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10%;
+        &:hover{
+            background-color: gainsboro;
+        }
+        &:nth-child(1){
+            font-size: 16px;
+            &:hover{
+                color: rgb(254, 6, 6);
+            }
+            
+        }
+        .sign_in{
+            background-color: $back_color;
+            width: 80px;
+            height: 30px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            border-color: $back_color;
+            border-radius: 4px;
+            border: 0;
+            &:hover{
+                background-color: #031221;
+                color: rgb(254, 6, 6);
+            }
+        }
+    }
+    div.email_banner {
+        background-image: url(sea.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 370px;
+        .lorem{
+            color: white;
+            cursor: pointer;
+        }
+        @include make_center();
+        flex-direction: column;
+        .email {
+            width: 85%;
+            @include make_center();
+            gap: 5px;
+            input {
+                width: 60%;
+                height: 28px;
+                outline: none;
+                border-radius: 3px;
+                border: 0;
+                padding-left: 8px;
+                &:hover{
+                    background-color: wheat;
+                    color: rgb(254, 6, 6);
+                    box-shadow: 0px 0px 5px 1px white;
+                }
+            }
+            .email_sign{
+                width: 80px;
+                height: 30px;
+                color: white;
+                border-color: $back_color;
+                background-color: $back_color;
+                border: 1px solid $back_color;
+                border-radius: 4px;
+                &:hover{
+                    background-color: #031221;
+                    color: rgb(254, 6, 6);
+                    border-color: #031221;
+                }
+            }
+        }
+    }
+    div.icons{
+        display: flex;
+        justify-content: center;
+        column-gap: 50px;
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 40px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+        &:hover{
+            background-color: antiquewhite;
+        }
+        .tv{
+            flex-direction: column;
+            @include make_center();
+            width: 250px;
+            svg{
+                color: $back_color;
+            }
+            p{
+                margin: 0;
+                text-align: center;
+            }
+        }
+        .ready {
+            flex-direction: column;
+            @include make_center();
+            width: 250px;
+            svg {
+                color: $back_color;
+            }
+            p{
+                margin: 0;
+                text-align: center;
+            }
+        }
+        .easy{
+            flex-direction: column;
+            @include make_center();
+            width: 250px;
+            svg {
+                color: $back_color;
+            }
+            p{
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+    div.phone{
+        display: flex;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        .phone_text{
+            @include make_center();
+            line-height: 22px;
+            width: 400px;
+            flex-direction: column;
+            h2{
+                text-transform: capitalize;
+                margin-bottom: 0;
+            }
+            p{
+                color: grey;
+                
+            }
+        }
+        .phone_picture{
+            width: 400px;
+            height: 250px;
+            background-image: url(phone.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    .code {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        .code_picture{
+            width: 400px;
+            height: 250px;
+            background-image: url(codes.jpg);
+            background-size: cover;
+            background-position: center;  
+        }
+        .code_text{
+            width: 400px;
+            line-height: 22px;
+            @include make_center();
+            flex-direction: column;
+            h2{
+                margin-bottom: 0;
+                text-transform: capitalize;
+            }
+            p{
+                color: grey;
+            }
+        }
+    }
+    .child{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        .child_text{
+            width: 400px;
+            flex-direction: column;
+            @include make_center();
+            line-height: 22px;
+            h2{
+                margin-bottom: 0;
+            }
+            p{
+                color: grey;
+            }
+        }
+        .child_picture {
+            width: 400px;
+            background-image: url(programmer.jpeg);
+            background-position: center;
+            background-size: cover;
+            height: 250px;
+        }
+    }
+    .what {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .people{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 70px;
+        div{
+            flex-direction: column;
+            padding: 20px 10px;
+            @include make_center();
+            &:hover{
+                background-color: rgb(194, 155, 76);
+            }
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 8px 2px black;
+            &:hover{
+                box-shadow: 0px 0px 10px 5px rebeccapurple;
+            }
+        }
+        h3, p{
+            text-align: center;
+            margin-bottom: 0;
+            &:hover{
+                color: aliceblue;
+                text-decoration: underline;
+            }
+        }
+        p{
+            color: grey;
+        }
+
+    }
+    .end_input{
+        background-image: url(sea.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        flex-direction: column;
+        @include make_center();
+        h1{
+            color: white;
+        }
+        div{
+            display: flex;
+            width: 50%;
+            column-gap: 5px;
+            justify-content: center;
+            input{
+                width: 70%;
+                height: 28px;
+                outline: none;
+                border-radius: 3px;
+                border: 0;
+                padding-left: 8px;
+                &:hover{
+                    background-color: wheat;
+                    color: rgb(254, 6, 6);
+                    box-shadow: 0px 0px 5px 1px white;
+                }
+
+            }
+            button{
+                &:hover{
+                    background-color: #031221;
+                    color: rgb(254, 6, 6);
+                    border-color: #031221;
+                }
+            }
+            button{
+                width: 80px;
+                height: 30px;
+                color: white;
+                border-color: $back_color;
+                background-color: $back_color;
+                border: 1px solid $back_color;
+                border-radius: 4px;
+            }
+        }
+    }
+    .ssylka{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
+        .nav{
+            nav{
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
+                a{
+                    color: $back_color;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                        color: rgb(254, 6, 6);
+                    }
+                }
+            }
+            p{
+                margin: 5px 0px 0px 0px;
+                align-items: center;
+                display: flex;
+                column-gap: 5px;
+            }
+        }
+        .grams{
+            @include make_center();
+            column-gap: 20px;
+            svg{
+                color: $back_color;
+            }
+        }
+    }
+}
+
+@media(max-width:500px){
+    .lorem{
+        padding: 0px 5px;
+        font-size: 22px;
+    }
+    .phone{
+        padding: 0px 10px;
+        .phone_text{
+            h2{
+                font-size: 22px;
+            }
+            p{
+                font-size: 14px;
+
+            }
+        }
+    }
+    .code{
+        padding: 0px 10px;
+        .code_text{
+
+            h2{
+                font-size: 22px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    .child{
+        padding: 0px 10px;
+        .child_text{
+            h2{
+                font-size: 22px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+   .end_input{
+    h1{
+        font-size: 20px;
+    }
+    .email{
+        input{
+            width: 80%;
+            font-size: 12px;
+        }
+    }
+   }
+    .end{
+        padding: 0px 5px;
+        .ssylka{
+            .nav{
+                nav{
+                    a{
+                        font-size: 14px;
+                    }
+                }
+                    p{
+                        font-size: 12px;
+                    }
+            }
+            .grams{
+                column-gap: 10px;
+                svg{
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+}
